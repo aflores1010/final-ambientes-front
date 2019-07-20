@@ -39,40 +39,40 @@ export const employeesMock: EmployeeInterface[] =
     gastos: 300  
    },
    {
-    cedula: 'string',
-    nombre: 'string',
-    apellido: 'string',
-    posicion: 'string',
-    fecha_ingreso: 'string',
-    salario: 800,
+    cedula: '7-785-1347',
+    nombre: 'Elba',
+    apellido: 'Laso',
+    posicion: 'Profesora',
+    fecha_ingreso: '20-10-2010',
+    salario: 1800,
+    gastos: 350  
+   },
+   {
+    cedula: '9-477-1314',
+    nombre: 'Polanco',
+    apellido: 'Física',
+    posicion: 'Profesor...',
+    fecha_ingreso: '04-12-2000',
+    salario: 2800,
+    gastos: 100  
+   },
+   {
+    cedula: '6-857-1347',
+    nombre: 'Gisela',
+    apellido: 'Clunie',
+    posicion: 'Profesora',
+    fecha_ingreso: '17-08-1999',
+    salario: 4500,
     gastos: 300  
    },
    {
-    cedula: 'string',
-    nombre: 'string',
-    apellido: 'string',
-    posicion: 'string',
-    fecha_ingreso: 'string',
-    salario: 800,
-    gastos: 300  
-   },
-   {
-    cedula: 'string',
-    nombre: 'string',
-    apellido: 'string',
-    posicion: 'string',
-    fecha_ingreso: 'string',
-    salario: 800,
-    gastos: 300  
-   },
-   {
-    cedula: 'string',
-    nombre: 'string',
-    apellido: 'string',
-    posicion: 'string',
-    fecha_ingreso: 'string',
-    salario: 800,
-    gastos: 300  
+    cedula: '3-774-4647',
+    nombre: 'Ana',
+    apellido: 'Valencia',
+    posicion: 'Decana',
+    fecha_ingreso: '10-10-2010',
+    salario: 5000,
+    gastos: 1300  
    },
 
 ]

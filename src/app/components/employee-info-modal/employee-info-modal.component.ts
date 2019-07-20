@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-info-modal',
@@ -10,7 +11,7 @@ export class EmployeeInfoModalComponent implements OnInit {
 
   @Input() employeeInfo: string;
 
-  constructor(private modalController: ModalController) {
+  constructor(private modalController: ModalController, private router: Router) {
    }
 
   ngOnInit() {
@@ -19,6 +20,11 @@ export class EmployeeInfoModalComponent implements OnInit {
 
   exit() {
     this.modalController.dismiss();
+  }
+
+  goToPayments( cedula ) {
+    this.modalController.dismiss();
+    this.router.navigate(['/payments', { cedula: cedula }]);
   }
 
 }

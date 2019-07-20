@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+          <ion-buttons slot="start">
+              <ion-back-button text="Regresar" defaultHref="/"></ion-back-button>
+          </ion-buttons>
+    <ion-title>Pagos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Datos del pago" debounce="200" (ionChange)="search( $event )"></ion-searchbar>
+  <ion-list *ngIf="payments">
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" class="col-title">
+            Fecha
+          </ion-col>
+          <ion-col class="col-title" size="3">
+            Monto
+          </ion-col>
+          <ion-col class="col-title" size="1">
+            #
+          </ion-col>
+          <ion-col class="col-title" size="4">
+            Concepto
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row *ngFor="let payment of payments" class="payment-row">
+          <ion-col size="4">
+            {{payment.fecha_pago}}
+          </ion-col>
+          <ion-col size="3">
+            {{payment.monto}}
+          </ion-col>
+          <ion-col size="1">
+            {{payment.cheque}}
+          </ion-col>
+          <ion-col size="4">
+            {{payment.concepto_pago}}
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

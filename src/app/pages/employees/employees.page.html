@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Empleados
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-searchbar placeholder="Dato del empleado" debounce="200" (ionChange)="search( $event )"></ion-searchbar>
+    <ion-list>
+      <ion-item>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="col-title">
+              Cédula
+            </ion-col>
+            <ion-col class="col-title">
+              Nombre
+            </ion-col>
+            <ion-col class="col-title">
+              Apellido
+            </ion-col>
+            <ion-col size="2" class="col-title">
+              Salario
+            </ion-col>
+          </ion-row>
+  
+          <ion-row *ngFor="let employee of employees" class="employee-row" (click)="selectEmlpoyee(employee)">
+            <ion-col>
+              {{employee.cedula}}
+            </ion-col>
+            <ion-col>
+              {{employee.nombre}}
+            </ion-col>
+            <ion-col>
+              {{employee.apellido}}
+            </ion-col>
+            <ion-col size="2">
+              {{employee.salario}}
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  
+  

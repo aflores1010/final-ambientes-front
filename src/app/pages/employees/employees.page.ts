@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
-import { EmployeeInterface } from '../interfaces/employee.interface';
-import {employeesMock} from '../mock/employees.mock'
-import { EmployeeInfoModalComponent } from '../components/employee-info-modal/employee-info-modal.component';
+import { EmployeeInterface } from 'src/app/interfaces/employee.interface';
 import { ModalController } from '@ionic/angular';
+import { employeesMock } from 'src/app/mock/employees.mock';
+import { EmployeeInfoModalComponent } from 'src/app/components/employee-info-modal/employee-info-modal.component';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-employees',
+  templateUrl: './employees.page.html',
+  styleUrls: ['./employees.page.scss'],
 })
-export class Tab1Page {
+
+export class EmployeesPage {
+
 
   employees: EmployeeInterface[] = [];
   tempArray: EmployeeInterface[] = [];
