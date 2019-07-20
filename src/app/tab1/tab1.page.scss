@@ -1,4 +1,33 @@
+
+ion-col {
+  font-size: 14px;
+}
+
+
+.col-title {
+  font-weight: bold;
+}
+
 .welcome-card img {
   max-height: 35vh;
   overflow: hidden;
 }
+
+.employee-row {
+  padding: 8px 2px 8px 2px;
+  border-top: 1px solid blue;
+}
+
+@media (min-width: 576px) {
+  ion-content {
+      padding: 0px 120px 0px 120px !important;
+  }
+}
+
+
+@media (min-width: 920px) {
+  ion-list {
+    padding: 0px 220px 0px 220px !important;
+  }
+}
+  
