@@ -6,3 +6,16 @@
 .col-title {
     font-weight: bold;
 }
+
+@media (min-width: 576px) {
+    ion-content {
+        padding: 0px 120px 0px 120px !important;
+    }
+  }
+  
+  
+  @media (min-width: 920px) {
+    ion-list {
+      padding: 0px 220px 0px 220px !important;
+    }
+  }
