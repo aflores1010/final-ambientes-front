@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PaymentInterface } from 'src/app/interfaces/payment.interface';
 import { paymentMock } from '../../mock/payments.mock'
+import { EmployeeInterface } from 'src/app/interfaces/employee.interface';
+import { ConnectionService } from 'src/app/services/connection.service';
 
 @Component({
   selector: 'app-payments',
@@ -11,10 +13,10 @@ export class PaymentsPage implements OnInit {
 
   payments: PaymentInterface[] = [];
   temPayments: PaymentInterface[] = [];
+  employee: EmployeeInterface;
 
 
-
-  constructor() { }
+  constructor(private connectionService: ConnectionService) { }
 
   ngOnInit() {
     this.payments = paymentMock;
@@ -39,5 +41,12 @@ export class PaymentsPage implements OnInit {
      }
  
   }
+
+  getPayments() {
+      this.connectionService.getEmployeePayments(this.employee.cedula).subscribe((resp: PaymentInterface[])=> {
+        console.log(resp);
+        this.payments = resp;
+      });
+    }
 
 }

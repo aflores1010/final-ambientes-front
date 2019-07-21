@@ -3,6 +3,7 @@ import { EmployeeInterface } from 'src/app/interfaces/employee.interface';
 import { ModalController } from '@ionic/angular';
 import { employeesMock } from 'src/app/mock/employees.mock';
 import { EmployeeInfoModalComponent } from 'src/app/components/employee-info-modal/employee-info-modal.component';
+import { ConnectionService } from 'src/app/services/connection.service';
 
 @Component({
   selector: 'app-employees',
@@ -17,7 +18,7 @@ export class EmployeesPage {
   tempArray: EmployeeInterface[] = [];
 
 
-  constructor(private modalController: ModalController) {
+  constructor(private modalController: ModalController, private connectionService: ConnectionService) {
     this.employees = employeesMock;
     this.tempArray = this.employees;
   }
@@ -55,5 +56,12 @@ export class EmployeesPage {
         });
         return await modal.present();
       }
+
+    public getEmployees() {
+      this.connectionService.getEmployees().subscribe((resp: EmployeeInterface[])=> {
+        console.log(resp);
+        this.employees = resp;
+      });
+    }
 
 }
